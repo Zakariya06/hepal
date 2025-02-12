@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call history</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="pageBody">
+    <!-- navVAr -->
+    <nav class="navbar navbar-expand-lg navbar-gradient">
+      <div class="container-fluid navbar-tab">
+        <span class="menu-btn" onclick="toggleSidebar()" style="display: none">
+          <svg
+            class="svg-inline--fa fa-bars"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="bars"
+            role="img"
+            viewBox="0 0 448 512"
+            data-fa-i2svg=""
+            width="1em"
+            height="1em"
+          >
+            <path
+              fill="white"
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            ></path>
+          </svg>
+        </span>
+
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo_img.svg" alt="logo" class="img-fluid" />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link weight-600 font-20 text-white"
+                aria-current="page"
+                href="https://panel.heypal.online/dashboard"
+                >Explore 🌍</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link weight-600 font-20 text-white"
+                aria-current="page"
+                href="https://panel.heypal.online/friends-lists"
+                >Friends 🤝</a
+              >
+            </li>
+            <li class="nav-item">
+              <form
+                action="https://panel.heypal.online/set-locale"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="gCXZOw6WKZPTTEFWT0eIgrqrP616T6kj45h0hrRV"
+                  autocomplete="off"
+                />
+                <select
+                  name="locale"
+                  onchange="this.form.submit()"
+                  class="form-select bg-transparent border-0 text-white weight-600 font-20"
+                  style="color: white"
+                >
+                  <option value="sq" style="color: black">Albanian</option>
+                  <option value="ar" style="color: black">Arabic</option>
+                  <option value="bn" style="color: black">Bengali</option>
+                  <option value="zh-CN" style="color: black">
+                    Chinese (Simplified)
+                  </option>
+                  <option value="da" style="color: black">Danish</option>
+                  <option value="nl" style="color: black">Dutch</option>
+                  <option value="en" selected="" style="color: black">
+                    English
+                  </option>
+                  <option value="tl" style="color: black">Filipino</option>
+                  <option value="fi" style="color: black">Finnish</option>
+                  <option value="fr" style="color: black">French</option>
+                  <option value="de" style="color: black">German</option>
+                  <option value="hi" style="color: black">Hindi</option>
+                  <option value="id" style="color: black">Indonesian</option>
+                  <option value="it" style="color: black">Italian</option>
+                  <option value="ja" style="color: black">Japanese</option>
+                  <option value="ko" style="color: black">Korean</option>
+                  <option value="la" style="color: black">Latin</option>
+                  <option value="ms" style="color: black">Malay</option>
+                  <option value="no" style="color: black">Norwegian</option>
+                  <option value="fa" style="color: black">Persian</option>
+                  <option value="pl" style="color: black">Polish</option>
+                  <option value="pt" style="color: black">Portuguese</option>
+                  <option value="ro" style="color: black">Romanian</option>
+                  <option value="ru" style="color: black">Russian</option>
+                  <option value="sr" style="color: black">Serbian</option>
+                  <option value="sl" style="color: black">Slovenian</option>
+                  <option value="th" style="color: black">Thai</option>
+                  <option value="tr" style="color: black">Turkish</option>
+                  <option value="tk" style="color: black">Turkmen</option>
+                  <option value="uk" style="color: black">Ukrainian</option>
+                  <option value="ur" style="color: black">Urdu</option>
+                  <option value="vi" style="color: black">Vietnamese</option>
+                </select>
+              </form>
+            </li>
+          </ul>
+
+          <form
+            class="d-flex search-box me-4 position-relative"
+            role="search"
+            action="javascript:void(0);"
+          >
+            <input
+              class="form-control me-2 border-25 px-4"
+              type="search"
+              name="search"
+              id="username"
+              placeholder="Search Name..."
+              aria-label="Search"
+              autocomplete="off"
+              required=""
+            />
+            <div
+              id="searchResults"
+              class="dropdown-menu w-100"
+              style="
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1050;
+              "
+            ></div>
+          </form>
+
+          <div class="online-toggle">
+            <div class="form-check form-switch">
+              <span class="me-2 font-17 weight-500 text-white">Online</span>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="onlineToggle"
+                checked=""
+              />
+            </div>
+          </div>
+          <div class="profile">
+            <img
+              src="https://panel.heypal.online/images/users/1738577721_67a0973962752.jpeg"
+              class="img-fluid"
+              alt="profile"
+            />
+            <span class="me-2 font-17 weight-500 text-white"
+              >Effety Hassan</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main Container -->
+    <main class="pageMainSection">
+      <div class="row">
+        <div class="col-xxl-2 col-lg-3">
+          <div id="sidebar" class="sidebar px-2 border-soft">
+            <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
+            <a href="https://panel.heypal.online/dashboard" class="mb-2"
+              >🏠 Home</a
+            >
+            <a href="https://panel.heypal.online/dashboard" class="mb-2"
+              >🈯 Explore</a
+            >
+            <a href="https://panel.heypal.online/friends-lists" class="mb-2"
+              >🤝 Friends</a
+            >
+            <a
+              href="https://panel.heypal.online/conversation-history"
+              class="mb-2"
+              >💬 Conversation</a
+            >
+            <a href="https://panel.heypal.online/wallet-details" class="mb-2"
+              >📨 Wallet</a
+            >
+            <a href="https://panel.heypal.online/plans" class="mb-2"
+              >📨 Get Premium</a
+            >
+            <a
+              href="https://panel.heypal.online/subscription"
+              class="active mb-2"
+              >📨 History</a
+            >
+            <a href="https://panel.heypal.online/profile" class="mb-2"
+              >👤 Profile</a
+            >
+            <a href="#" class="mb-2">🔔 Notifications</a>
+            <a href="https://panel.heypal.online/security-settings" class="mb-2"
+              >⚙️ Settings</a
+            >
+            <a href="#" class="mb-2"
+              ><img src="./img/addImage.svg" class="img-fluid" alt=""
+            /></a>
+            <a href="https://panel.heypal.online/logout" class="mb-2"
+              ><img src="./img/logout.svg" class="img-fluid" alt="" /> Log
+              Out</a
+            >
+          </div>
+        </div>
+
+        <div class="col-xxl-10 col-lg-9 ms-auto">
+          <div class="dashBoardRightMainContent">
+            <div class="dahboardProfile">
+              <img
+                src="./img/dash-profile.png"
+                alt="profile"
+                class="dashProfile"
+              />
+
+              <div class="dashProfileText">
+                <h1 class="mdheading">Deny John</h1>
+                <button class="mainBtn my-2">
+                  <img
+                    src="./img/voice_btn_icon.png"
+                    alt=""
+                    class="mainbtnIcon"
+                  />
+                  Voice
+                </button>
+                <button class="mainBtn">
+                  <img
+                    src="./img/video_btn_icon.png"
+                    alt=""
+                    class="mainbtnIcon"
+                  />
+                  Video
+                </button>
+              </div>
+            </div>
+
+            <div class="dashSearchContainer">
+              <form class="searchHolder">
+                <input
+                  type="search"
+                  placeholder="Search name....  "
+                  class="inputArea"
+                />
+                <button class="searchBtn">
+                  <img
+                    src="./img/search_btn_icon.png"
+                    alt="search"
+                    class="searchBtnIcon"
+                  />
+                </button>
+              </form>
+
+              <button class="mainBtn">📨 Messages</button>
+              <button class="mainBtn active">👥 Contacts</button>
+            </div>
+
+            <!-- call history -->
+            <div class="callHistoryWrrper">
+              <h1 class="mdheading">📞 Call History</h1>
+              <table class="callhistoryTable">
+                <thead>
+                  <tr>
+                    <td class="tableHeading">📅 Date</td>
+                    <td class="tableHeading">02-1-25</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tableHeading">📊 Total Calls</td>
+                    <td class="tableHeading">12 Calls</td>
+                  </tr>
+                  <tr>
+                    <td class="tableHeading">➝ Ongoing</td>
+                    <td class="tableHeading">32 Ongoing</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="dashSearchContainer">
+              <button class="mainBtn active">Associated Calls</button>
+              <button class="mainBtn active">Recent Calls</button>
+              <button class="mainBtn active">Missed Calls</button>
+            </div>
+
+            <!-- call history -->
+            <div class="callHistoryWrrper">
+              <div class="userTable">
+                <table class="callhistoryTable">
+                  <thead>
+                    <tr>
+                      <td class="tableHeading">
+                        <div class="dropdown">
+                          <h5
+                            class="dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="./img/user_icon.png"
+                              alt="user"
+                              class="tableDropIcon"
+                            />
+                            User Name
+                          </h5>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+
+                      <td class="tableHeading">
+                        <div class="dropdown w-100 text-center">
+                          <h5
+                            class="dropdown-toggle justify-content-center"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="./img/phone_call.png"
+                              alt="user"
+                              class="tableDropIcon"
+                            />
+                            Phone Number
+                          </h5>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+
+                      <td class="tableHeading">
+                        <div class="dropdown w-100 text-center">
+                          <h5
+                            class="dropdown-toggle justify-content-center"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="./img/call_detail.png"
+                              alt="user"
+                              class="tableDropIcon"
+                            />
+                            Call Type
+                          </h5>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td class="tableHeading">
+                        <div class="dropdown w-100 text-center">
+                          <h5
+                            class="dropdown-toggle justify-content-center"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="./img/time_icon.png"
+                              alt="user"
+                              class="tableDropIcon"
+                            />
+                            Duration
+                          </h5>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                      <td class="tableHeading">
+                        <div class="dropdown w-100 text-center">
+                          <h5
+                            class="dropdown-toggle justify-content-center"
+                            type="button"
+                            id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            <img
+                              src="./img/data_icon.png"
+                              alt="user"
+                              class="tableDropIcon"
+                            />
+                            Date and Time
+                          </h5>
+                          <ul
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton1"
+                          >
+                            <li>
+                              <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Another action</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Something else here</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tableHeading">
+                        <div class="tableImageContaienr">
+                          <img
+                            src="./img/table_1.png"
+                            alt="anas Ibn"
+                            class="tableImage"
+                          />
+                          <span> Anas ibn </span>
+                        </div>
+                      </td>
+                      <td class="tableHeading text-center">037631372</td>
+                      <td class="tableHeading text-center">
+                        <div class="tableImageContaienr justify-content-center">
+                          <img
+                            src="./img/incoming.png"
+                            alt="anas Ibn"
+                            class=""
+                          />
+                          <span> Incoming </span>
+                        </div>
+                      </td>
+                      <td class="tableHeading text-center">00:36</td>
+                      <td class="tableHeading text-center">
+                        jan 14,2023. 01:49pm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tableHeading">
+                        <div class="tableImageContaienr">
+                          <img
+                            src="./img/table_2.png"
+                            alt="anas Ibn"
+                            class="tableImage"
+                          />
+                          <span>ali </span>
+                        </div>
+                      </td>
+                      <td class="tableHeading text-center">043545435</td>
+                      <td class="tableHeading text-center">
+                        <div class="tableImageContaienr justify-content-center">
+                          <img
+                            src="./img/upcoming.png"
+                            alt="anas Ibn"
+                            class=""
+                          />
+                          <span> Outcoming </span>
+                        </div>
+                      </td>
+                      <td class="tableHeading text-center">11:26</td>
+                      <td class="tableHeading text-center">
+                        feb 15,2023. 06:49pm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tableHeading">
+                        <div class="tableImageContaienr">
+                          <img
+                            src="./img/table_3.png"
+                            alt="anas Ibn"
+                            class="tableImage"
+                          />
+                          <span> ahmad</span>
+                        </div>
+                      </td>
+                      <td class="tableHeading text-center">34545435</td>
+                      <td class="tableHeading text-center">
+                        <div class="tableImageContaienr justify-content-center">
+                          <img
+                            src="./img/incoming.png"
+                            alt="anas Ibn"
+                            class=""
+                          />
+                          <span> Incoming </span>
+                        </div>
+                      </td>
+                      <td class="tableHeading text-center">13:46</td>
+                      <td class="tableHeading text-center">
+                        oct 16,2023. 08:00pm
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- call history -->
+            <div class="callHistoryWrrper">
+              <h1 class="mdheading">🔑 Key Elements</h1>
+              <table class="callhistoryTable">
+                <tbody>
+                  <tr>
+                    <td class="tableHeading">
+                      <div class="tableImageContaienr">
+                        <img
+                          src="./img/table_4.png"
+                          alt="anas Ibn"
+                          class="tableImage"
+                        />
+                        <span> John Doe </span>
+                      </div>
+                    </td>
+                    <td class="tableHeading text-center">✅ Completed</td>
+                    <td class="dotsIconTd text-center">
+                      <img
+                        src="./img/dot_img.png"
+                        alt="options"
+                        class="dotsIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tableHeading">
+                      <div class="tableImageContaienr">
+                        <img
+                          src="./img/table_5.png"
+                          alt="anas Ibn"
+                          class="tableImage"
+                        />
+                        <span> ibrham </span>
+                      </div>
+                    </td>
+                    <td class="tableHeading text-center">❌ Missed</td>
+                    <td class="dotsIconTd text-center">
+                      <img
+                        src="./img/dot_img.png"
+                        alt="options"
+                        class="dotsIcon"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tableHeading">
+                      <div class="tableImageContaienr">
+                        <img
+                          src="./img/table_6.png"
+                          alt="anas Ibn"
+                          class="tableImage"
+                        />
+                        <span> 🔵 Ongoing </span>
+                      </div>
+                    </td>
+                    <td class="tableHeading text-center">🔵 Ongoing</td>
+                    <td class="dotsIconTd text-center">
+                      <img
+                        src="./img/dot_img.png"
+                        alt="options"
+                        class="dotsIcon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      function toggleSidebar() {
+        let sidebar = document.getElementById("sidebar");
+        let content = document.getElementById("main-content");
+        if (sidebar.style.left === "0px") {
+          sidebar.style.left = "-280px";
+        } else {
+          sidebar.style.left = "0px";
+        }
+      }
+
+      // Online Toggle Alert
+      document
+        .getElementById("onlineToggle")
+        .addEventListener("change", function () {
+          if (this.checked) {
+            alert("You are now ONLINE");
+          } else {
+            alert("You are now OFFLINE");
+          }
+        });
+    </script>
+  </body>
+</html>

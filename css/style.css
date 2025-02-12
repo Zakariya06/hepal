@@ -1,0 +1,533 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+:root {
+  --main_color: #fff;
+  --secondary_color: #000;
+  --green: #31fe38;
+}
+body {
+  background-color: var(--main_color);
+  font-family: "Poppins", serif;
+}
+.pageBody {
+  background-image: url("../img/background.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(60, 98, 147, 1) 30%,
+    rgba(204, 138, 123, 1) 100%
+  );
+}
+.menu-btn {
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  margin-right: 15px;
+}
+.search-box {
+  position: relative;
+}
+.search-box input {
+  padding-left: 35px;
+}
+.border-25 {
+  border-radius: 25px;
+}
+.online-toggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  margin-left: 15px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.weight-500 {
+  font-weight: 500;
+}
+.font-20 {
+  font-size: 20px;
+}
+.weight-600 {
+  font-weight: 600;
+}
+#onlineToggle:checked {
+  background-color: var(--green);
+  border: var(--green);
+}
+.font-17 {
+  font-size: 17px;
+}
+.weight-500 {
+  font-weight: 500;
+}
+.online-toggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  margin-left: 15px;
+}
+.form-check-input {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* side bar */
+.sidebar {
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+  overflow-y: auto;
+  padding-top: 3.3%;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.border-soft {
+  border: 1px solid rgba(108, 107, 107, 1);
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar a.active {
+  background: rgba(217, 217, 217, 0.35);
+  border-color: rgba(39, 30, 30, 0.63);
+}
+.sidebar a:hover {
+  background: rgba(217, 217, 217, 0.35);
+  border-color: rgba(39, 30, 30, 0.63);
+}
+
+/* dashBoardRightMainContent */
+.dashBoardRightMainContent {
+  padding: 2rem 1.4rem;
+  margin: 2rem 0;
+
+  background: #74747482;
+  border-radius: 12px;
+}
+.pageMainSection {
+  padding-right: 1rem;
+}
+.dashProfile {
+  width: 153px;
+  height: 153px;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center center;
+}
+.dahboardProfile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.mdheading {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--main_color);
+}
+.mainBtn {
+  border: none;
+  background: linear-gradient(360deg, #012768 19%, #5eb7e1 100%);
+  box-shadow: 0px 4.47px 4.47px 0px #00000040;
+  border-radius: 68.18px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--main_color);
+  padding: 0.3rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease-in-out;
+}
+.mainBtn:hover,
+.mainBtn.active {
+  background: #ffffff;
+  color: #000000;
+}
+.mainBtn:hover img {
+  filter: invert(1);
+}
+.mainBtn.active:hover {
+  background: linear-gradient(360deg, #012768 19%, #5eb7e1 100%);
+  color: var(--main_color);
+}
+/* dashSearchContainer */
+.dashSearchContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* searchHolder */
+.searchHolder {
+  flex: 0 0 25%;
+  background: #000000;
+  border-radius: 46px;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.6rem 1rem;
+}
+
+.inputArea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--main_color);
+  flex: 1;
+}
+.searchBtn {
+  border: none;
+  background: transparent;
+}
+.searchBtnIcon {
+  width: 19px;
+  height: auto;
+}
+.dashSearchContainer .mainBtn {
+  padding: 0.6rem 1.5rem;
+}
+
+/* callHistoryWrrper */
+.callHistoryWrrper {
+  margin: 2rem 0;
+}
+.callHistoryWrrper .mdheading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.callhistoryTable {
+  border: 1px solid var(--main_color);
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+}
+.tableHeading {
+  padding: 1rem;
+  color: var(--main_color);
+  font-weight: 400;
+  font-size: 1.5rem;
+  border: 1px solid var(--main_color);
+}
+.tableImageContaienr {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tableImage {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.userTable .callhistoryTable {
+  max-width: 90%;
+}
+.Incoming {
+  width: 19px;
+  height: auto;
+}
+.dotsIconTd {
+  padding: 0.2rem 3rem;
+  cursor: pointer;
+  border: 1px solid var(--main_color);
+}
+
+/*--------------- profile page ----------- */
+/* callhistoryPageDashBoard */
+.callhistoryPageDashBoard .mdheading {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--secondary_color);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.uploadProfileDetails .row {
+  flex-wrap: wrap;
+}
+
+.inputHolder {
+  margin-bottom: 1rem;
+}
+.inputLabel {
+  font-weight: 500;
+  font-size: 1.13rem;
+  color: var(--main_color);
+  margin-bottom: 0.1rem;
+}
+.inputHolder .form-control {
+  width: 100%;
+}
+
+.callhistoryPageDashBoard .row {
+  flex-wrap: wrap;
+}
+/* ShortcutsContaner */
+.ShortcutsContaner {
+  background: #7e7e7e45;
+  border: 0.95px solid #7a7a7a;
+  border-radius: 13px;
+  overflow: hidden;
+  padding-bottom: 4rem;
+}
+.blankShortcutsBox {
+  padding: 2rem 1rem;
+  border-bottom: 0.95px solid #a8a7a7;
+}
+.dashSettingsCol .mdheading {
+  padding-left: 0;
+  margin: 0;
+}
+.settingTabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+.settingTabs .mdheading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.checkMarksContainer {
+  padding: 1rem;
+}
+.checkMarksWrrper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 0.6rem;
+}
+.subHeading {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #bcb7b7;
+}
+.checkMarkInput {
+  position: absolute; /* Hide the default checkbox */
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.checkmark {
+  position: relative;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s;
+}
+.checkMarkInput:checked + .checkmark {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  left: 27%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 13px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg) translate(-50%, -50%);
+  -ms-transform: rotate(45deg) translate(-50%, -50%);
+  transform: rotate(45deg) translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.checkMarkInput:checked + .checkmark:after {
+  opacity: 1;
+}
+
+.ConnectedAccountsContainer {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+.ConnectedAccountsContainer .mdHeading {
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #000000;
+}
+.soicalMediaIconContainer {
+  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+.profileFormSubmitBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+.profileSaveBtnContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .userTable .callhistoryTable {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .callHistoryWrrper {
+    overflow-x: auto;
+    width: 100%;
+  }
+  .userTable {
+    width: 1400px;
+  }
+  .userTable .callhistoryTable {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-brand {
+    width: 150px;
+    height: auto;
+  }
+  .menu-btn {
+    display: block !important;
+  }
+  .navbar {
+    padding: 0.2rem 0;
+  }
+  .pageMainSection .row {
+    position: relative;
+  }
+  .sidebar {
+    position: absolute;
+    width: 260px;
+    left: -110%;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+  }
+
+  /* dashBoardRightMainContent */
+  .dashBoardRightMainContent {
+    padding: 1rem 1rem;
+  }
+  .pageMainSection {
+    padding: 0 1rem;
+  }
+  .dashProfile {
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+  }
+  .mdheading {
+    font-size: 1.1rem;
+  }
+  .mainBtn {
+    font-size: 0.87rem;
+    padding: 0.3rem 1.2rem;
+  }
+  /* dashSearchContainer */
+  .dashSearchContainer {
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  /* searchHolder */
+  .searchHolder {
+    flex: 0 0 100%;
+  }
+
+  .inputArea {
+    flex: 1;
+  }
+  .searchBtnIcon {
+    width: 16px;
+  }
+  .dashSearchContainer .mainBtn {
+    padding: 0.5rem 1.2rem;
+  }
+
+  /* callHistoryWrrper */
+  .callHistoryWrrper {
+    margin: 1.4rem 0;
+  }
+  .callHistoryWrrper .mdheading {
+    font-size: 1.7rem;
+  }
+  .tableHeading {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  .tableImageContaienr {
+    gap: 0.4rem;
+  }
+  .tableImage {
+    width: 28px;
+    height: 28px;
+  }
+  .userTable .callhistoryTable {
+    max-width: 100%;
+  }
+  .Incoming {
+    width: 16px;
+  }
+  .dotsIconTd {
+    padding: 0.2rem 1rem;
+  }
+  .profileFormSubmitBtns {
+    margin-top: 1.4rem;
+  }
+}
