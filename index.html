@@ -23,35 +23,106 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+
+    <style>
+      .isolate-css,
+      .isolate-css::before,
+      .isolate-css::after,
+      .isolate-css *,
+      .isolate-css *::before,
+      .isolate-css *::after {
+        all: revert;
+      }
+
+      ::-webkit-scrollbar {
+        width: 1px;
+        height: 7px !important;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0a9af6;
+      }
+    </style>
   </head>
-  <body class="pageBody">
-    <!-- navVAr -->
+  <body style="background: url(./images/background.jpeg)">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar px-3 border-soft">
+      <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
+      <a href="https://panel.heypal.online/dashboard" class="active mb-2"
+        >🏠 Home</a
+      >
+      <a href="https://panel.heypal.online/dashboard" class="mb-2"
+        >🈯 Explore</a
+      >
+      <a href="https://panel.heypal.online/friends-lists" class="mb-2"
+        >🤝 Friends</a
+      >
+      <a href="https://panel.heypal.online/conversation-history" class="mb-2"
+        >💬 Conversation</a
+      >
+      <a href="https://panel.heypal.online/wallet-details" class="mb-2"
+        >📨 Wallet</a
+      >
+      <a href="https://panel.heypal.online/plans" class="mb-2"
+        >📨 Get Premium</a
+      >
+      <a href="https://panel.heypal.online/subscription" class="mb-2"
+        >📨 History</a
+      >
+      <a href="https://panel.heypal.online/profile" class="mb-2">👤 Profile</a>
+      <a href="#" class="mb-2">🔔 Notifications</a>
+      <a href="https://panel.heypal.online/security-settings" class="mb-2"
+        >⚙️ Settings</a
+      >
+      <a href="#" class="mb-2"
+        ><img src="./images/ads_nav.svg" class="img-fluid" alt=""
+      /></a>
+      <a href="https://panel.heypal.online/logout" class="mb-2"
+        ><img src="./images/logout.svg" class="img-fluid" alt="" /> Log Out</a
+      >
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-gradient">
       <div class="container-fluid navbar-tab">
-        <span class="menu-btn" onclick="toggleSidebar()" style="display: none">
-          <svg
-            class="svg-inline--fa fa-bars"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="bars"
-            role="img"
-            viewBox="0 0 448 512"
-            data-fa-i2svg=""
-            width="1em"
-            height="1em"
-          >
-            <path
-              fill="white"
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-            ></path>
-          </svg>
-        </span>
+        <!-- Sidebar Toggle Button -->
+        <span class="menu-btn" onclick="toggleSidebar()" style="display: none"
+          ><i class="fas fa-bars"></i
+        ></span>
 
-        <a class="navbar-brand" href="#">
-          <img src="./img/logo_img.svg" alt="logo" class="img-fluid" />
-        </a>
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./images/new heypal logo white 1.svg"
+            alt="logo"
+            class="img-fluid"
+        /></a>
+
+        <!-- <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -79,7 +150,7 @@
                 <input
                   type="hidden"
                   name="_token"
-                  value="gCXZOw6WKZPTTEFWT0eIgrqrP616T6kj45h0hrRV"
+                  value="jWtzmJMtorqkZF6zZ50iDRR8NrWk59evwRgpaVos"
                   autocomplete="off"
                 />
                 <select
@@ -96,7 +167,7 @@
                   </option>
                   <option value="da" style="color: black">Danish</option>
                   <option value="nl" style="color: black">Dutch</option>
-                  <option value="en" selected="" style="color: black">
+                  <option value="en" selected style="color: black">
                     English
                   </option>
                   <option value="tl" style="color: black">Filipino</option>
@@ -129,6 +200,7 @@
             </li>
           </ul>
 
+          <!-- Search Box -->
           <form
             class="d-flex search-box me-4 position-relative"
             role="search"
@@ -142,7 +214,7 @@
               placeholder="Search Name..."
               aria-label="Search"
               autocomplete="off"
-              required=""
+              required
             />
             <div
               id="searchResults"
@@ -157,6 +229,7 @@
             ></div>
           </form>
 
+          <!-- Online Toggle Button -->
           <div class="online-toggle">
             <div class="form-check form-switch">
               <span class="me-2 font-17 weight-500 text-white">Online</span>
@@ -164,10 +237,11 @@
                 class="form-check-input"
                 type="checkbox"
                 id="onlineToggle"
-                checked=""
+                checked
               />
             </div>
           </div>
+          <!-- Profile -->
           <div class="profile">
             <img
               src="https://panel.heypal.online/images/users/1738577721_67a0973962752.jpeg"
@@ -183,481 +257,416 @@
     </nav>
 
     <!-- main Container -->
-    <main class="pageMainSection">
-      <div class="row">
-        <div class="col-xxl-2 col-lg-3">
-          <div id="sidebar" class="sidebar px-2 border-soft">
-            <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
-            <a href="https://panel.heypal.online/dashboard" class="mb-2"
-              >🏠 Home</a
-            >
-            <a href="https://panel.heypal.online/dashboard" class="mb-2"
-              >🈯 Explore</a
-            >
-            <a href="https://panel.heypal.online/friends-lists" class="mb-2"
-              >🤝 Friends</a
-            >
-            <a
-              href="https://panel.heypal.online/conversation-history"
-              class="mb-2"
-              >💬 Conversation</a
-            >
-            <a href="https://panel.heypal.online/wallet-details" class="mb-2"
-              >📨 Wallet</a
-            >
-            <a href="https://panel.heypal.online/plans" class="mb-2"
-              >📨 Get Premium</a
-            >
-            <a
-              href="https://panel.heypal.online/subscription"
-              class="active mb-2"
-              >📨 History</a
-            >
-            <a href="https://panel.heypal.online/profile" class="mb-2"
-              >👤 Profile</a
-            >
-            <a href="#" class="mb-2">🔔 Notifications</a>
-            <a href="https://panel.heypal.online/security-settings" class="mb-2"
-              >⚙️ Settings</a
-            >
-            <a href="#" class="mb-2"
-              ><img src="./img/addImage.svg" class="img-fluid" alt=""
-            /></a>
-            <a href="https://panel.heypal.online/logout" class="mb-2"
-              ><img src="./img/logout.svg" class="img-fluid" alt="" /> Log
-              Out</a
-            >
+    <div class="container-fluid py-4" id="main-content">
+      <div class="dashBoardRightMainContent ms-auto">
+        <div class="dahboardProfile">
+          <img
+            src="./images/dash-profile.png"
+            alt="profile"
+            class="dashProfile"
+          />
+
+          <div class="dashProfileText">
+            <h1 class="mdheading">Deny John</h1>
+            <button class="mainBtn my-2">
+              <img
+                src="./images/voice_btn_icon.png"
+                alt=""
+                class="mainbtnIcon"
+              />
+              Voice
+            </button>
+            <button class="mainBtn">
+              <img
+                src="./images/video_btn_icon.png"
+                alt=""
+                class="mainbtnIcon"
+              />
+              Video
+            </button>
           </div>
         </div>
 
-        <div class="col-xxl-10 col-lg-9 ms-auto">
-          <div class="dashBoardRightMainContent">
-            <div class="dahboardProfile">
+        <div class="dashSearchContainer">
+          <form class="searchHolder">
+            <input
+              type="search"
+              placeholder="Search name....  "
+              class="inputArea"
+            />
+            <button class="searchBtn">
               <img
-                src="./img/dash-profile.png"
-                alt="profile"
-                class="dashProfile"
+                src="./images/search_btn_icon.png"
+                alt="search"
+                class="searchBtnIcon"
               />
+            </button>
+          </form>
 
-              <div class="dashProfileText">
-                <h1 class="mdheading">Deny John</h1>
-                <button class="mainBtn my-2">
-                  <img
-                    src="./img/voice_btn_icon.png"
-                    alt=""
-                    class="mainbtnIcon"
-                  />
-                  Voice
-                </button>
-                <button class="mainBtn">
-                  <img
-                    src="./img/video_btn_icon.png"
-                    alt=""
-                    class="mainbtnIcon"
-                  />
-                  Video
-                </button>
-              </div>
-            </div>
+          <button class="mainBtn">📨 Messages</button>
+          <button class="mainBtn active">👥 Contacts</button>
+        </div>
 
-            <div class="dashSearchContainer">
-              <form class="searchHolder">
-                <input
-                  type="search"
-                  placeholder="Search name....  "
-                  class="inputArea"
-                />
-                <button class="searchBtn">
-                  <img
-                    src="./img/search_btn_icon.png"
-                    alt="search"
-                    class="searchBtnIcon"
-                  />
-                </button>
-              </form>
+        <!-- call history -->
+        <div class="callHistoryWrrper">
+          <h1 class="mdheading">📞 Call History</h1>
+          <table class="callhistoryTable">
+            <thead>
+              <tr>
+                <td class="tableHeading">📅 Date</td>
+                <td class="tableHeading">02-1-25</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tableHeading">📊 Total Calls</td>
+                <td class="tableHeading">12 Calls</td>
+              </tr>
+              <tr>
+                <td class="tableHeading">➝ Ongoing</td>
+                <td class="tableHeading">32 Ongoing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-              <button class="mainBtn">📨 Messages</button>
-              <button class="mainBtn active">👥 Contacts</button>
-            </div>
+        <div class="dashSearchContainer">
+          <button class="mainBtn active">Associated Calls</button>
+          <button class="mainBtn active">Recent Calls</button>
+          <button class="mainBtn active">Missed Calls</button>
+        </div>
 
-            <!-- call history -->
-            <div class="callHistoryWrrper">
-              <h1 class="mdheading">📞 Call History</h1>
-              <table class="callhistoryTable">
-                <thead>
-                  <tr>
-                    <td class="tableHeading">📅 Date</td>
-                    <td class="tableHeading">02-1-25</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="tableHeading">📊 Total Calls</td>
-                    <td class="tableHeading">12 Calls</td>
-                  </tr>
-                  <tr>
-                    <td class="tableHeading">➝ Ongoing</td>
-                    <td class="tableHeading">32 Ongoing</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="dashSearchContainer">
-              <button class="mainBtn active">Associated Calls</button>
-              <button class="mainBtn active">Recent Calls</button>
-              <button class="mainBtn active">Missed Calls</button>
-            </div>
-
-            <!-- call history -->
-            <div class="callHistoryWrrper">
-              <div class="userTable">
-                <table class="callhistoryTable">
-                  <thead>
-                    <tr>
-                      <td class="tableHeading">
-                        <div class="dropdown">
-                          <h5
-                            class="dropdown-toggle"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <img
-                              src="./img/user_icon.png"
-                              alt="user"
-                              class="tableDropIcon"
-                            />
-                            User Name
-                          </h5>
-                          <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton1"
-                          >
-                            <li>
-                              <a class="dropdown-item" href="#">Action</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Another action</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Something else here</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-
-                      <td class="tableHeading">
-                        <div class="dropdown w-100 text-center">
-                          <h5
-                            class="dropdown-toggle justify-content-center"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <img
-                              src="./img/phone_call.png"
-                              alt="user"
-                              class="tableDropIcon"
-                            />
-                            Phone Number
-                          </h5>
-                          <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton1"
-                          >
-                            <li>
-                              <a class="dropdown-item" href="#">Action</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Another action</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Something else here</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-
-                      <td class="tableHeading">
-                        <div class="dropdown w-100 text-center">
-                          <h5
-                            class="dropdown-toggle justify-content-center"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <img
-                              src="./img/call_detail.png"
-                              alt="user"
-                              class="tableDropIcon"
-                            />
-                            Call Type
-                          </h5>
-                          <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton1"
-                          >
-                            <li>
-                              <a class="dropdown-item" href="#">Action</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Another action</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Something else here</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td class="tableHeading">
-                        <div class="dropdown w-100 text-center">
-                          <h5
-                            class="dropdown-toggle justify-content-center"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <img
-                              src="./img/time_icon.png"
-                              alt="user"
-                              class="tableDropIcon"
-                            />
-                            Duration
-                          </h5>
-                          <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton1"
-                          >
-                            <li>
-                              <a class="dropdown-item" href="#">Action</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Another action</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Something else here</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                      <td class="tableHeading">
-                        <div class="dropdown w-100 text-center">
-                          <h5
-                            class="dropdown-toggle justify-content-center"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <img
-                              src="./img/data_icon.png"
-                              alt="user"
-                              class="tableDropIcon"
-                            />
-                            Date and Time
-                          </h5>
-                          <ul
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownMenuButton1"
-                          >
-                            <li>
-                              <a class="dropdown-item" href="#">Action</a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Another action</a
-                              >
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#"
-                                >Something else here</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="tableHeading">
-                        <div class="tableImageContaienr">
-                          <img
-                            src="./img/table_1.png"
-                            alt="anas Ibn"
-                            class="tableImage"
-                          />
-                          <span> Anas ibn </span>
-                        </div>
-                      </td>
-                      <td class="tableHeading text-center">037631372</td>
-                      <td class="tableHeading text-center">
-                        <div class="tableImageContaienr justify-content-center">
-                          <img
-                            src="./img/incoming.png"
-                            alt="anas Ibn"
-                            class=""
-                          />
-                          <span> Incoming </span>
-                        </div>
-                      </td>
-                      <td class="tableHeading text-center">00:36</td>
-                      <td class="tableHeading text-center">
-                        jan 14,2023. 01:49pm
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="tableHeading">
-                        <div class="tableImageContaienr">
-                          <img
-                            src="./img/table_2.png"
-                            alt="anas Ibn"
-                            class="tableImage"
-                          />
-                          <span>ali </span>
-                        </div>
-                      </td>
-                      <td class="tableHeading text-center">043545435</td>
-                      <td class="tableHeading text-center">
-                        <div class="tableImageContaienr justify-content-center">
-                          <img
-                            src="./img/upcoming.png"
-                            alt="anas Ibn"
-                            class=""
-                          />
-                          <span> Outcoming </span>
-                        </div>
-                      </td>
-                      <td class="tableHeading text-center">11:26</td>
-                      <td class="tableHeading text-center">
-                        feb 15,2023. 06:49pm
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="tableHeading">
-                        <div class="tableImageContaienr">
-                          <img
-                            src="./img/table_3.png"
-                            alt="anas Ibn"
-                            class="tableImage"
-                          />
-                          <span> ahmad</span>
-                        </div>
-                      </td>
-                      <td class="tableHeading text-center">34545435</td>
-                      <td class="tableHeading text-center">
-                        <div class="tableImageContaienr justify-content-center">
-                          <img
-                            src="./img/incoming.png"
-                            alt="anas Ibn"
-                            class=""
-                          />
-                          <span> Incoming </span>
-                        </div>
-                      </td>
-                      <td class="tableHeading text-center">13:46</td>
-                      <td class="tableHeading text-center">
-                        oct 16,2023. 08:00pm
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- call history -->
-            <div class="callHistoryWrrper">
-              <h1 class="mdheading">🔑 Key Elements</h1>
-              <table class="callhistoryTable">
-                <tbody>
-                  <tr>
-                    <td class="tableHeading">
-                      <div class="tableImageContaienr">
+        <!-- call history -->
+        <div class="callHistoryWrrper">
+          <div class="userTable">
+            <table class="callhistoryTable">
+              <thead>
+                <tr>
+                  <td class="tableHeading">
+                    <div class="dropdown">
+                      <h5
+                        class="dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         <img
-                          src="./img/table_4.png"
-                          alt="anas Ibn"
-                          class="tableImage"
+                          src="./images/user_icon.png"
+                          alt="user"
+                          class="tableDropIcon"
                         />
-                        <span> John Doe </span>
-                      </div>
-                    </td>
-                    <td class="tableHeading text-center">✅ Completed</td>
-                    <td class="dotsIconTd text-center">
-                      <img
-                        src="./img/dot_img.png"
-                        alt="options"
-                        class="dotsIcon"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="tableHeading">
-                      <div class="tableImageContaienr">
+                        User Name
+                      </h5>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+
+                  <td class="tableHeading">
+                    <div class="dropdown w-100 text-center">
+                      <h5
+                        class="dropdown-toggle justify-content-center"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         <img
-                          src="./img/table_5.png"
-                          alt="anas Ibn"
-                          class="tableImage"
+                          src="./images/phone_call.png"
+                          alt="user"
+                          class="tableDropIcon"
                         />
-                        <span> ibrham </span>
-                      </div>
-                    </td>
-                    <td class="tableHeading text-center">❌ Missed</td>
-                    <td class="dotsIconTd text-center">
-                      <img
-                        src="./img/dot_img.png"
-                        alt="options"
-                        class="dotsIcon"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="tableHeading">
-                      <div class="tableImageContaienr">
+                        Phone Number
+                      </h5>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+
+                  <td class="tableHeading">
+                    <div class="dropdown w-100 text-center">
+                      <h5
+                        class="dropdown-toggle justify-content-center"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         <img
-                          src="./img/table_6.png"
-                          alt="anas Ibn"
-                          class="tableImage"
+                          src="./images/call_detail.png"
+                          alt="user"
+                          class="tableDropIcon"
                         />
-                        <span> 🔵 Ongoing </span>
-                      </div>
-                    </td>
-                    <td class="tableHeading text-center">🔵 Ongoing</td>
-                    <td class="dotsIconTd text-center">
+                        Call Type
+                      </h5>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="tableHeading">
+                    <div class="dropdown w-100 text-center">
+                      <h5
+                        class="dropdown-toggle justify-content-center"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="./images/time_icon.png"
+                          alt="user"
+                          class="tableDropIcon"
+                        />
+                        Duration
+                      </h5>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td class="tableHeading">
+                    <div class="dropdown w-100 text-center">
+                      <h5
+                        class="dropdown-toggle justify-content-center"
+                        type="button"
+                        id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <img
+                          src="./images/data_icon.png"
+                          alt="user"
+                          class="tableDropIcon"
+                        />
+                        Date and Time
+                      </h5>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li>
+                          <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableHeading">
+                    <div class="tableImageContaienr">
                       <img
-                        src="./img/dot_img.png"
-                        alt="options"
-                        class="dotsIcon"
+                        src="./images/table_1.png"
+                        alt="anas Ibn"
+                        class="tableImage"
                       />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                      <span> Anas ibn </span>
+                    </div>
+                  </td>
+                  <td class="tableHeading text-center">037631372</td>
+                  <td class="tableHeading text-center">
+                    <div class="tableImageContaienr justify-content-center">
+                      <img
+                        src="./images/incoming.png"
+                        alt="anas Ibn"
+                        class=""
+                      />
+                      <span> Incoming </span>
+                    </div>
+                  </td>
+                  <td class="tableHeading text-center">00:36</td>
+                  <td class="tableHeading text-center">jan 14,2023. 01:49pm</td>
+                </tr>
+                <tr>
+                  <td class="tableHeading">
+                    <div class="tableImageContaienr">
+                      <img
+                        src="./images/table_2.png"
+                        alt="anas Ibn"
+                        class="tableImage"
+                      />
+                      <span>ali </span>
+                    </div>
+                  </td>
+                  <td class="tableHeading text-center">043545435</td>
+                  <td class="tableHeading text-center">
+                    <div class="tableImageContaienr justify-content-center">
+                      <img
+                        src="./images/upcoming.png"
+                        alt="anas Ibn"
+                        class=""
+                      />
+                      <span> Outcoming </span>
+                    </div>
+                  </td>
+                  <td class="tableHeading text-center">11:26</td>
+                  <td class="tableHeading text-center">feb 15,2023. 06:49pm</td>
+                </tr>
+                <tr>
+                  <td class="tableHeading">
+                    <div class="tableImageContaienr">
+                      <img
+                        src="./images/table_3.png"
+                        alt="anas Ibn"
+                        class="tableImage"
+                      />
+                      <span> ahmad</span>
+                    </div>
+                  </td>
+                  <td class="tableHeading text-center">34545435</td>
+                  <td class="tableHeading text-center">
+                    <div class="tableImageContaienr justify-content-center">
+                      <img
+                        src="./images/incoming.png"
+                        alt="anas Ibn"
+                        class=""
+                      />
+                      <span> Incoming </span>
+                    </div>
+                  </td>
+                  <td class="tableHeading text-center">13:46</td>
+                  <td class="tableHeading text-center">oct 16,2023. 08:00pm</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </div>
+
+        <!-- call history -->
+        <div class="callHistoryWrrper">
+          <h1 class="mdheading">🔑 Key Elements</h1>
+          <table class="callhistoryTable">
+            <tbody>
+              <tr>
+                <td class="tableHeading">
+                  <div class="tableImageContaienr">
+                    <img
+                      src="./images/table_4.png"
+                      alt="anas Ibn"
+                      class="tableImage"
+                    />
+                    <span> John Doe </span>
+                  </div>
+                </td>
+                <td class="tableHeading text-center">✅ Completed</td>
+                <td class="dotsIconTd text-center">
+                  <img
+                    src="./images/dot_img.png"
+                    alt="options"
+                    class="dotsIcon"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="tableHeading">
+                  <div class="tableImageContaienr">
+                    <img
+                      src="./images/table_5.png"
+                      alt="anas Ibn"
+                      class="tableImage"
+                    />
+                    <span> ibrham </span>
+                  </div>
+                </td>
+                <td class="tableHeading text-center">❌ Missed</td>
+                <td class="dotsIconTd text-center">
+                  <img
+                    src="./images/dot_img.png"
+                    alt="options"
+                    class="dotsIcon"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="tableHeading">
+                  <div class="tableImageContaienr">
+                    <img
+                      src="./images/table_6.png"
+                      alt="anas Ibn"
+                      class="tableImage"
+                    />
+                    <span> 🔵 Ongoing </span>
+                  </div>
+                </td>
+                <td class="tableHeading text-center">🔵 Ongoing</td>
+                <td class="dotsIconTd text-center">
+                  <img
+                    src="./images/dot_img.png"
+                    alt="options"
+                    class="dotsIcon"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </main>
+    </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"

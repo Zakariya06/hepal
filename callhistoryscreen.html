@@ -23,35 +23,105 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <style>
+      .isolate-css,
+      .isolate-css::before,
+      .isolate-css::after,
+      .isolate-css *,
+      .isolate-css *::before,
+      .isolate-css *::after {
+        all: revert;
+      }
+
+      ::-webkit-scrollbar {
+        width: 1px;
+        height: 7px !important;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0a9af6;
+      }
+    </style>
   </head>
-  <body class="pageBody">
-    <!-- navVAr -->
+  <body style="background: url(./images/background.jpeg)">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar px-3 border-soft">
+      <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
+      <a href="https://panel.heypal.online/dashboard" class="active mb-2"
+        >🏠 Home</a
+      >
+      <a href="https://panel.heypal.online/dashboard" class="mb-2"
+        >🈯 Explore</a
+      >
+      <a href="https://panel.heypal.online/friends-lists" class="mb-2"
+        >🤝 Friends</a
+      >
+      <a href="https://panel.heypal.online/conversation-history" class="mb-2"
+        >💬 Conversation</a
+      >
+      <a href="https://panel.heypal.online/wallet-details" class="mb-2"
+        >📨 Wallet</a
+      >
+      <a href="https://panel.heypal.online/plans" class="mb-2"
+        >📨 Get Premium</a
+      >
+      <a href="https://panel.heypal.online/subscription" class="mb-2"
+        >📨 History</a
+      >
+      <a href="https://panel.heypal.online/profile" class="mb-2">👤 Profile</a>
+      <a href="#" class="mb-2">🔔 Notifications</a>
+      <a href="https://panel.heypal.online/security-settings" class="mb-2"
+        >⚙️ Settings</a
+      >
+      <a href="#" class="mb-2"
+        ><img src="./images/ads_nav.svg" class="img-fluid" alt=""
+      /></a>
+      <a href="https://panel.heypal.online/logout" class="mb-2"
+        ><img src="./images/logout.svg" class="img-fluid" alt="" /> Log Out</a
+      >
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-gradient">
       <div class="container-fluid navbar-tab">
-        <span class="menu-btn" onclick="toggleSidebar()" style="display: none">
-          <svg
-            class="svg-inline--fa fa-bars"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="bars"
-            role="img"
-            viewBox="0 0 448 512"
-            data-fa-i2svg=""
-            width="1em"
-            height="1em"
-          >
-            <path
-              fill="white"
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-            ></path>
-          </svg>
-        </span>
+        <!-- Sidebar Toggle Button -->
+        <span class="menu-btn" onclick="toggleSidebar()" style="display: none"
+          ><i class="fas fa-bars"></i
+        ></span>
 
-        <a class="navbar-brand" href="#">
-          <img src="./img/logo_img.svg" alt="logo" class="img-fluid" />
-        </a>
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./images/new heypal logo white 1.svg"
+            alt="logo"
+            class="img-fluid"
+        /></a>
+
+        <!-- <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -79,7 +149,7 @@
                 <input
                   type="hidden"
                   name="_token"
-                  value="gCXZOw6WKZPTTEFWT0eIgrqrP616T6kj45h0hrRV"
+                  value="jWtzmJMtorqkZF6zZ50iDRR8NrWk59evwRgpaVos"
                   autocomplete="off"
                 />
                 <select
@@ -96,7 +166,7 @@
                   </option>
                   <option value="da" style="color: black">Danish</option>
                   <option value="nl" style="color: black">Dutch</option>
-                  <option value="en" selected="" style="color: black">
+                  <option value="en" selected style="color: black">
                     English
                   </option>
                   <option value="tl" style="color: black">Filipino</option>
@@ -129,6 +199,7 @@
             </li>
           </ul>
 
+          <!-- Search Box -->
           <form
             class="d-flex search-box me-4 position-relative"
             role="search"
@@ -142,7 +213,7 @@
               placeholder="Search Name..."
               aria-label="Search"
               autocomplete="off"
-              required=""
+              required
             />
             <div
               id="searchResults"
@@ -157,6 +228,7 @@
             ></div>
           </form>
 
+          <!-- Online Toggle Button -->
           <div class="online-toggle">
             <div class="form-check form-switch">
               <span class="me-2 font-17 weight-500 text-white">Online</span>
@@ -164,10 +236,11 @@
                 class="form-check-input"
                 type="checkbox"
                 id="onlineToggle"
-                checked=""
+                checked
               />
             </div>
           </div>
+          <!-- Profile -->
           <div class="profile">
             <img
               src="https://panel.heypal.online/images/users/1738577721_67a0973962752.jpeg"
@@ -183,468 +256,413 @@
     </nav>
 
     <!-- main Container -->
-    <main class="pageMainSection">
-      <div class="row">
-        <div class="col-xxl-2 col-lg-3">
-          <div id="sidebar" class="sidebar px-2 border-soft">
-            <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
-            <a href="https://panel.heypal.online/dashboard" class="mb-2"
-              >🏠 Home</a
-            >
-            <a href="https://panel.heypal.online/dashboard" class="mb-2"
-              >🈯 Explore</a
-            >
-            <a href="https://panel.heypal.online/friends-lists" class="mb-2"
-              >🤝 Friends</a
-            >
-            <a
-              href="https://panel.heypal.online/conversation-history"
-              class="mb-2"
-              >💬 Conversation</a
-            >
-            <a href="https://panel.heypal.online/wallet-details" class="mb-2"
-              >📨 Wallet</a
-            >
-            <a href="https://panel.heypal.online/plans" class="mb-2"
-              >📨 Get Premium</a
-            >
-            <a href="https://panel.heypal.online/subscription" class="mb-2"
-              >📨 History</a
-            >
-            <a href="https://panel.heypal.online/profile" class="active mb-2"
-              >👤 Profile</a
-            >
-            <a href="#" class="mb-2">🔔 Notifications</a>
-            <a href="https://panel.heypal.online/security-settings" class="mb-2"
-              >⚙️ Settings</a
-            >
-            <a href="#" class="mb-2"
-              ><img src="./img/addImage.svg" class="img-fluid" alt=""
-            /></a>
-            <a href="https://panel.heypal.online/logout" class="mb-2"
-              ><img src="./img/logout.svg" class="img-fluid" alt="" /> Log
-              Out</a
-            >
-          </div>
+    <div class="container-fluid py-4" id="main-content">
+      <div class="dashBoardRightMainContent callhistoryPageDashBoard">
+        <div class="dahboardProfilePage">
+          <img
+            src="./images/profile_page_profile.png"
+            alt="profile"
+            class="dashProfile"
+          />
         </div>
 
-        <div class="col-xxl-10 col-lg-9 ms-auto">
-          <div class="dashBoardRightMainContent callhistoryPageDashBoard">
-            <div class="dahboardProfilePage">
-              <img
-                src="./img/profile_page_profile.png"
-                alt="profile"
-                class="dashProfile"
-              />
+        <form action="" class="profileForm">
+          <div class="row mt-4">
+            <div class="col-lg-9">
+              <div class="uploadProfileDetails">
+                <h1 class="mdheading">Upload profile</h1>
+
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">First Name:</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Last Name:</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Gender:</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Country:</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Language:</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> City:</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Address:</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Postal Code:</label>
+                      <input type="number" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Date.of Brith:</label>
+                      <input type="date" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Phone Number:</label>
+                      <input type="number" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Profession Status:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Occupation:</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Education level:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Favorite music:</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Name the film you watch:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Article Activities:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Type of sport you play:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Relationship status:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Do You have Child:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        If Yes how many chlidrens:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Religious Affiliation:</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel"> Religious:</label>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="inputHolder">
+                      <label for="#" class="inputLabel">
+                        Write about yourself:</label
+                      >
+                      <textarea class="form-control" rows="5"> </textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <form action="" class="profileForm">
-              <div class="row mt-4">
-                <div class="col-lg-9">
-                  <div class="uploadProfileDetails">
-                    <h1 class="mdheading">Upload profile</h1>
+            <div class="col-lg-3">
+              <div class="dashSettingsCol">
+                <h1 class="mdheading">Settings</h1>
+                <h1 class="mdheading mt-3">Shortcuts:</h1>
 
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">First Name:</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Last Name:</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Gender:</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Gender</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Country:</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Language:</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> City:</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Address:</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Postal Code:</label
-                          >
-                          <input type="number" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Date.of Brith:</label
-                          >
-                          <input type="date" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Phone Number:</label
-                          >
-                          <input type="number" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Profession Status:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Occupation:</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Education level:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Favorite music:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Name the film you watch:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Article Activities:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Type of sport you play:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Relationship status:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Do You have Child:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            If Yes how many chlidrens:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Religious Affiliation:</label
-                          >
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel"> Religious:</label>
-                          <select
-                            class="form-select"
-                            aria-label="Default select example"
-                          >
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-8">
-                        <div class="inputHolder">
-                          <label for="#" class="inputLabel">
-                            Write about yourself:</label
-                          >
-                          <textarea class="form-control" rows="5"> </textarea>
-                        </div>
+                <div class="ShortcutsContaner">
+                  <div class="blankShortcutsBox"></div>
+
+                  <div class="settingTabs">
+                    <h5 class="mdheading">
+                      <img
+                        src="./images/lock_icon.png"
+                        alt="Privacy"
+                        class="mdHeadingIcon"
+                      />
+                      Privacy Settings:
+                    </h5>
+
+                    <div class="online-toggle">
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="onlineToggle"
+                          checked=""
+                        />
                       </div>
                     </div>
                   </div>
-                </div>
+                  <div class="settingTabs">
+                    <h5 class="mdheading">
+                      <img
+                        src="./images/bell_icon.png"
+                        alt="bell_icon"
+                        class="mdHeadingIcon"
+                      />
+                      Notification Preferences:
+                    </h5>
+                  </div>
 
-                <div class="col-lg-3">
-                  <div class="dashSettingsCol">
-                    <h1 class="mdheading">Settings</h1>
-                    <h1 class="mdheading mt-3">Shortcuts:</h1>
+                  <div class="checkMarksContainer">
+                    <label class="checkMarksWrrper">
+                      <h2 class="subHeading">Email Notifications</h2>
+                      <input
+                        type="checkbox"
+                        class="checkMarkInput"
+                        id="myCheckbox"
+                        checked
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="checkMarksWrrper">
+                      <h2 class="subHeading">Push Alerts</h2>
+                      <input
+                        type="checkbox"
+                        class="checkMarkInput"
+                        id="myCheckbox"
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="checkMarksWrrper">
+                      <h2 class="subHeading">SMS Updates</h2>
+                      <input
+                        type="checkbox"
+                        class="checkMarkInput"
+                        id="myCheckbox"
+                        checked
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
 
-                    <div class="ShortcutsContaner">
-                      <div class="blankShortcutsBox"></div>
+                  <div class="ConnectedAccountsContainer">
+                    <h1 class="mdHeading">Connected Accounts:</h1>
 
-                      <div class="settingTabs">
-                        <h5 class="mdheading">
-                          <img
-                            src="./img/lock_icon.png"
-                            alt="Privacy"
-                            class="mdHeadingIcon"
-                          />
-                          Privacy Settings:
-                        </h5>
-
-                        <div class="online-toggle">
-                          <div class="form-check form-switch">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="onlineToggle"
-                              checked=""
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="settingTabs">
-                        <h5 class="mdheading">
-                          <img
-                            src="./img/bell_icon.png"
-                            alt="bell_icon"
-                            class="mdHeadingIcon"
-                          />
-                          Notification Preferences:
-                        </h5>
-                      </div>
-
-                      <div class="checkMarksContainer">
-                        <label class="checkMarksWrrper">
-                          <h2 class="subHeading">Email Notifications</h2>
-                          <input
-                            type="checkbox"
-                            class="checkMarkInput"
-                            id="myCheckbox"
-                            checked
-                          />
-                          <span class="checkmark"></span>
-                        </label>
-                        <label class="checkMarksWrrper">
-                          <h2 class="subHeading">Push Alerts</h2>
-                          <input
-                            type="checkbox"
-                            class="checkMarkInput"
-                            id="myCheckbox"
-                          />
-                          <span class="checkmark"></span>
-                        </label>
-                        <label class="checkMarksWrrper">
-                          <h2 class="subHeading">SMS Updates</h2>
-                          <input
-                            type="checkbox"
-                            class="checkMarkInput"
-                            id="myCheckbox"
-                            checked
-                          />
-                          <span class="checkmark"></span>
-                        </label>
-                      </div>
-
-                      <div class="ConnectedAccountsContainer">
-                        <h1 class="mdHeading">Connected Accounts:</h1>
-
-                        <div class="soicalMediaIconContainer">
-                          <a href="#" class="socialLinks">
-                            <img
-                              src="./img/insta_icon.png"
-                              alt="instagram"
-                              class="socialLinksIcon"
-                            />
-                          </a>
-                          <a href="#" class="socialLinks">
-                            <img
-                              src="./img/facebook_icon.png"
-                              alt="facebook_icon"
-                              class="socialLinksIcon"
-                            />
-                          </a>
-                          <a href="#" class="socialLinks">
-                            <img
-                              src="./img/twitter_icon.png"
-                              alt="twitter_icon"
-                              class="socialLinksIcon"
-                            />
-                          </a>
-                        </div>
-
-                        <button class="mainBtn">Save Settings</button>
-                      </div>
+                    <div class="soicalMediaIconContainer">
+                      <a href="#" class="socialLinks">
+                        <img
+                          src="./images/insta_icon.png"
+                          alt="instagram"
+                          class="socialLinksIcon"
+                        />
+                      </a>
+                      <a href="#" class="socialLinks">
+                        <img
+                          src="./images/facebook_icon.png"
+                          alt="facebook_icon"
+                          class="socialLinksIcon"
+                        />
+                      </a>
+                      <a href="#" class="socialLinks">
+                        <img
+                          src="./images/twitter_icon.png"
+                          alt="twitter_icon"
+                          class="socialLinksIcon"
+                        />
+                      </a>
                     </div>
+
+                    <button class="mainBtn">Save Settings</button>
                   </div>
                 </div>
               </div>
-
-              <div class="profileFormSubmitBtns">
-                <button class="mainBtn" type="submit">Update Profile</button>
-
-                <div class="profileSaveBtnContainer">
-                  <button class="mainBtn">Save</button>
-                  <button class="mainBtn">Update</button>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
-        </div>
+
+          <div class="profileFormSubmitBtns">
+            <button class="mainBtn" type="submit">Update Profile</button>
+
+            <div class="profileSaveBtnContainer">
+              <button class="mainBtn">Save</button>
+              <button class="mainBtn">Update</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </main>
+    </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
