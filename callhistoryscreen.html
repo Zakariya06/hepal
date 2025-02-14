@@ -61,9 +61,7 @@
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar px-3 border-soft">
       <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
-      <a href="https://panel.heypal.online/dashboard" class=" mb-2"
-        >🏠 Home</a
-      >
+      <a href="https://panel.heypal.online/dashboard" class="mb-2">🏠 Home</a>
       <a href="https://panel.heypal.online/dashboard" class="mb-2"
         >🈯 Explore</a
       >
@@ -82,7 +80,9 @@
       <a href="https://panel.heypal.online/subscription" class="mb-2"
         >📨 History</a
       >
-      <a href="https://panel.heypal.online/profile" class="mb-2 active">👤 Profile</a>
+      <a href="https://panel.heypal.online/profile" class="mb-2 active"
+        >👤 Profile</a
+      >
       <a href="#" class="mb-2">🔔 Notifications</a>
       <a href="https://panel.heypal.online/security-settings" class="mb-2"
         >⚙️ Settings</a
@@ -256,8 +256,55 @@
     </nav>
 
     <!-- main Container -->
-    <div class="container-fluid py-4 translateY" id="main-content">
-      <div class="dashBoardRightMainContent callhistoryPageDashBoard">
+    <div class="container-fluid pb-4" id="main-content">
+      <div class="row paddingInner">
+        <div class="col top-banner">
+          <img
+            src="./images/banner_ads.png"
+            class="img-fluid w-100"
+            alt="Banner Ad"
+          />
+          <h1 class="AidsText">Aids</h1>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="pendingCallModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="pendingCallModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="pendingCallModalLabel">
+                Incoming Call
+              </h5>
+            </div>
+            <div class="modal-body">
+              <p>You have an incoming call. Do you want to accept it?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="acceptCallBtn" class="btn btn-success">
+                Accept
+              </button>
+              <button
+                type="button"
+                id="rejectCallBtn"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Reject
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="dashBoardRightMainContent callhistoryPageDashBoard mt-3 mx-lg-4"
+      >
         <div class="dahboardProfilePage">
           <img
             src="./images/profile_page_profile.png"
