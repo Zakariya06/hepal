@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="csrf-token"
+      content="47MnacLfnaxFGA19MUjZdhaZcE2kpdzRtdPwKA5s"
+    />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robot" content="" />
+    <link
+      rel="shortcut icon"
+      href="https://panel.heypal.online/assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Heypal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+      integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://panel.heypal.online/assets/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <style>
+      .tab-pane {
+        display: none;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+      .tab-btn.active {
+        background-color: #007bff !important;
+        color: white !important;
+      }
+    </style>
+  <body style="background-image: url('./images/background.jpeg'); background-size: cover; ">
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8436V75WPV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-8436V75WPV");
+    </script>
+
+    <!-- Include Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Sidebar -->
+
+    <div id="sidebar" class="sidebar px-3 border-soft">
+      <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
+      <a href="#" class="mb-2">🏠 Home</a>
+      <a href="#" class="mb-2">🈯 Explore</a>
+      <a href="#" class="active mb-2">🤝 Friends</a>
+      <a href="#" class="mb-2">💬 History</a>
+      <a href="#" class="mb-2">📨 Wallet</a>
+      <a href="#" class="mb-2">👤 Friends</a>
+      <a href="#" class="mb-2">🔔 Notifications</a>
+      <a href="#" class="mb-2">⚙️ Settings</a>
+      <a href="#" class="mb-2"
+        ><img src="./image/ads_nav.svg" class="img-fluid" alt=""
+      /></a>
+      <a href="#" class="mb-2"
+        ><img src="./image/logout.svg" class="img-fluid" alt="" /> Log Out</a
+      >
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-gradient">
+      <div class="container-fluid navbar-tab">
+        <!-- Sidebar Toggle Button -->
+        <span class="menu-btn" onclick="toggleSidebar()" style="display: none"
+          ><i class="fas fa-bars"></i
+        ></span>
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./image/new heypal logo white 1.png"
+            alt="logo"
+            class="img-fluid"
+        /></a>
+
+         <!-- Collapse Button for Mobile -->
+         <button
+         class="navbar-toggler"
+         type="button"
+         data-bs-toggle="collapse"
+         data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent"
+         aria-expanded="false"
+         aria-label="Toggle navigation"
+       >
+          <i class="fa-solid fa-angles-down text-white"></i>
+       </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link weight-600 font-20 text-white"
+                aria-current="page"
+                href="#"
+                >Explore 🌍</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link weight-600 font-20 text-white"
+                aria-current="page"
+                href="#"
+                >Friends 🤝</a
+              >
+            </li>
+            <li class="nav-item">
+              <select
+                name="language"
+                id=""
+                class="form-select bg-transparent border-0 text-white weight-600 font-20"
+              >
+                <option value="">Language</option>
+              </select>
+            </li>
+          </ul>
+
+          <!-- Search Box -->
+          <form class="d-flex search-box me-4" role="search">
+            <input
+              class="form-control me-2 border-25 px-4"
+              type="search"
+              placeholder="Search Name..."
+              aria-label="Search"
+            />
+          </form>
+
+          <!-- Online Toggle Button -->
+          <div class="online-toggle">
+            <div class="form-check form-switch">
+              <span class="me-2 font-17 weight-500 text-white">Online</span>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="onlineToggle"
+                checked
+              />
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="profile">
+            <img src="./image/profile.svg" class="img-fluid" alt="profile" />
+            <span class="me-2 font-17 weight-500 text-white">Deny John</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid" id="main-content">
+      <div class="row mx-4">
+        <div class="col top-banner">
+          <img src="./images/banner_ads.png" class="img-fluid w-100" alt="Banner Ad" />
+        </div>
+      </div>
+      <div class="row mt-4 search_bar">
+        <div class="col">
+          <div class="row rounded  soft-yellow py-3 " role="tablist">
+            <div class="col-md-3 col-sm-12">
+              <button class="btn btn-primary weight-500 font-20 text-white w-100" data-bs-toggle="tab" data-bs-target="#friends" role="tab" aria-controls="friends" aria-selected="true">
+                <img src="./images/2-man.png" class="img-fluid" alt=""> MY FRIENDS
+              </button>
+            </div>
+            <div class="col-md-3 col-sm-12">
+              <button class="btn border-soft weight-500 font-20 w-100" data-bs-toggle="tab" data-bs-target="#group" role="tab" aria-controls="group" aria-selected="false">
+                <img src="./images/group-icon.png" class="img-fluid" alt=""> MY GROUP
+              </button>
+            </div>
+            <div class="col-md-3 col-sm-12">
+              <button class="btn border-soft weight-500 font-20 w-100" data-bs-toggle="tab" data-bs-target="#requests" role="tab" aria-controls="requests" aria-selected="false">
+                <img src="./images/friend-icon.png" class="img-fluid" alt=""> FRIEND REQUESTS
+              </button>
+            </div>
+            <div class="col-md-3 col-sm-12">
+              <button class="btn border-soft weight-500 font-20 w-100" data-bs-toggle="tab" data-bs-target="#blocked" role="tab" aria-controls="blocked" aria-selected="false">
+                <img src="./images/block-icon.png" class="img-fluid" alt=""> BLOCKED
+              </button>
+            </div>
+         
+            
+          </div>
+        </div>
+      </div>
+    
+
+        <div class="tab-content" >
+          <div class="tab-pane fade show active" id="friends" role="tabpanel">
+            <div class="row mt-4 mx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+              <!-- Friends Content Here -->
+              <div class="col d-flex justify-content-center ">
+                <div
+                  class="profile-card card" style="background: url('./images/profile-image.jpeg') no-repeat center center / cover;">
+                  <div class="status-dot"></div>
+                  <div class="profile-overlay pt-0">
+                    <div class="row">
+                      <div class="col pt-3">  <span class="mb-0 fw-bold">Rohit</span></div>
+                      <div class="col pe-0">
+                          <a href="#" class="block-btn float-end" style="border-top-right-radius: 0;  border-bottom-right-radius: 0;">
+                              Block
+                              <img
+                                    src="./images/cross.png"
+                                    alt=""
+                                    class="img-fluid"
+                                  />
+                            </a>
+                      </div>
+                    
+                    </div>
+                    <p class="mb-1 text-white weight-700" style="font-size: 12px">India [URDU]</p>
+                    <div class="row">
+                      <div class="col text-left ps-0 ">
+                        <a href="#" class="call-btn" style="border-top-left-radius: 0;  border-bottom-left-radius: 0;">
+                          <img
+                            src="./images/video-icon.svg"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          Call
+                        </a>
+                      </div>
+                      <div class="col text-end pe-0" >
+                        <a href="#" class="call-btn" style="border-top-right-radius: 0;  border-bottom-right-radius: 0;">
+                          <img
+                            src="./images/icon-mans.png"
+                            alt=""
+                            class="img-fluid"
+                          />
+                          ADD
+                        </a>
+                      </div>
+                    
+                      
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="group" role="tabpanel">
+            <div class="row mt-4 mx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+              <!-- Group Content Here -->
+            </div>
+          </div>
+          <div class="tab-pane fade" id="requests" role="tabpanel">
+            <div class="row mt-4 mx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+              <!-- Friend Requests Content Here -->
+            </div>
+          </div>
+          <div class="tab-pane fade" id="blocked" role="tabpanel">
+            <div class="row mt-4 mx-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+              <!-- Blocked Users Content Here -->
+            </div>
+          </div>
+      
+          
+        </div>
+      </div> 
+
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+ 
+  </body>
+</html>

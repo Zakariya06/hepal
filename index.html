@@ -58,13 +58,16 @@
       }
     </style>
   </head>
-  <body style="background: url(./images/background.jpeg)">
+  <body
+    style="
+      background-image: url('./images/background.jpeg');
+      background-size: cover;
+    "
+  >
     <!-- Sidebar -->
     <div id="sidebar" class="sidebar px-3 border-soft">
       <!-- <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i> Close</a> -->
-      <a href="https://panel.heypal.online/dashboard" class=" mb-2"
-        >🏠 Home</a
-      >
+      <a href="https://panel.heypal.online/dashboard" class="mb-2">🏠 Home</a>
       <a href="https://panel.heypal.online/dashboard" class="mb-2"
         >🈯 Explore</a
       >
@@ -88,12 +91,18 @@
       <a href="https://panel.heypal.online/security-settings" class="mb-2"
         >⚙️ Settings</a
       >
-      <a href="#" class="mb-2"
-        ><img src="./images/ads_nav.svg" class="img-fluid" alt=""
-      /></a>
       <a href="https://panel.heypal.online/logout" class="mb-2"
         ><img src="./images/logout.svg" class="img-fluid" alt="" /> Log Out</a
       >
+      <a href="#" class="mb-2"
+        ><img src="./images/ads_nav.svg" class="img-fluid" alt=""
+      /></a>
+      <a href="#" class="mb-2"
+        ><img src="./images/ads_nav.svg" class="img-fluid" alt=""
+      /></a>
+      <a href="#" class="mb-2"
+        ><img src="./images/ads_nav.svg" class="img-fluid" alt=""
+      /></a>
     </div>
 
     <!-- Navbar -->
@@ -112,17 +121,18 @@
             class="img-fluid"
         /></a>
 
-        <!-- <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
+        <!-- Collapse Button for Mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+           <i class="fa-solid fa-angles-down text-white"></i>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -156,7 +166,7 @@
                 <select
                   name="locale"
                   onchange="this.form.submit()"
-                  class="form-select bg-transparent border-0 text-white weight-600 font-20"
+                  class="form-select bg-transparent text-white weight-600 font-20"
                   style="color: white"
                 >
                   <option value="sq" style="color: black">Albanian</option>
@@ -202,7 +212,7 @@
 
           <!-- Search Box -->
           <form
-            class="d-flex search-box me-4 position-relative"
+            class="d-flex   search-box me-4 position-relative headsearchInput"
             role="search"
             action="javascript:void(0);"
           >
@@ -303,8 +313,7 @@
         </div>
       </div>
 
-
-      <div class="dashBoardRightMainContent mt-3  mx-lg-4  ms-auto">
+      <div class="dashBoardRightMainContent mt-3 mx-lg-4 ms-auto">
         <div class="dahboardProfile">
           <img
             src="./images/dash-profile.png"

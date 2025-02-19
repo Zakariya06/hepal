@@ -1,0 +1,371 @@
+body {
+  font-family: "Poppins";
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: relative;
+}
+:root {
+  --green: rgba(49, 254, 56, 1);
+  --soft-yellow: rgba(255, 241, 199, 0.52);
+  --btn-primary: rgba(0, 125, 251, 1);
+  --bg-red: rgba(255, 0, 0, 1);
+  --lighter-white: rgba(242, 240, 240, 0.36);
+  --soft-black: rgba(66, 66, 66, 1);
+}
+.navbar-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(60, 98, 147, 1) 30%,
+    rgba(204, 138, 123, 1) 100%
+  );
+}
+.acc-btn {
+  background: linear-gradient(
+    to bottom,
+    rgba(94, 183, 225, 1),
+    rgba(1, 39, 104, 1)
+  );
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-11 {
+  font-size: 11px;
+}
+.font-17 {
+  font-size: 17px;
+}
+.font-24 {
+  font-size: 24px;
+}
+.font-22 {
+  font-size: 22px;
+}
+.font-34 {
+  font-size: 34px;
+}
+.font-36 {
+  font-size: 36px;
+}
+.font-5 {
+  font-size: 5px I !important;
+}
+.font-18 {
+  font-size: 18px I !important;
+}
+.font-15 {
+  font-size: 15px;
+}
+.weight-700 {
+  font-weight: 700;
+}
+.weight-600 {
+  font-weight: 600;
+}
+.weight-500 {
+  font-weight: 500;
+}
+.weight-400 {
+  font-weight: 400;
+}
+.border-25 {
+  border-radius: 25px;
+}
+.border-10 {
+  border-radius: 10px;
+}
+.margin-10 {
+  margin-left: -10px;
+}
+.border-40 {
+  border-radius: 40px;
+}
+.width-35 {
+  width: 39px;
+}
+.reverse {
+  top: -35px;
+}
+.border-white {
+  border: 1px solid #fff;
+}
+#onlineToggle:checked {
+  background-color: var(--green);
+  border: var(--green);
+}
+.soft-black {
+  color: var(--soft-black);
+}
+
+.navbar {
+  height: 200px;
+}
+.navbar-tab {
+  margin-bottom: auto;
+}
+.search-box {
+  position: relative;
+}
+.search-box input {
+  padding-left: 35px; /* Space for the icon */
+}
+.search-box .fa-search {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  position: absolute;
+  left: 0;
+  top: 122px;
+  bottom: 0;
+  background: #fff;
+  overflow-y: auto;
+  padding-top: 3.3%;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+#main-content {
+  padding-left: 260px;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar a.active {
+  background: rgba(217, 217, 217, 0.35);
+  border: 1px solid rgba(39, 30, 30, 0.63);
+  border-radius: 15px;
+}
+
+/* Toggle Button */
+.menu-btn {
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  margin-right: 15px;
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding-left: 35px; /* Space for the icon */
+}
+
+/* Online Toggle */
+.online-toggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+.form-check-input {
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.soft-yellow {
+  background-color: var(--soft-yellow);
+}
+.border-soft {
+  border: 1px solid rgba(108, 107, 107, 1);
+}
+.dropdown .dropdown-toggle {
+  width: 70px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.dropdown-menu {
+  width: 70px !important;
+  min-width: 70px !important;
+  padding: 0;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 2px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.profile-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  /* overflow: hidden; */
+  /* z-index: -1; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.profile-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+.status-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.call-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.block-btn {
+  background-color: var(--bg-red);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 8px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.chat-btn {
+  background-color: rgba(217, 217, 217, 0.58);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.top-banner {
+  margin-top: -80px;
+  z-index: 2;
+}
+.search_bar {
+  margin-left: 38px;
+  margin-right: 38px;
+}
+.btn-primary {
+  background-color: var(--btn-primary);
+}
+.bg-red {
+  background-color: var(--bg-red);
+}
+.bg-lighter {
+  background-color: var(--lighter-white);
+}
+.family-plus {
+  font-family: "Plus Jakarta Sans";
+}
+.credit-card {
+  right: 10px;
+  width: 280px;
+  top: 50px;
+}
+.ballon-card {
+  left: 35px;
+  bottom: 90px;
+  width: 110px;
+}
+
+/* chnage values */
+.dropHeading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+.coinImage {
+  width: 2.1rem;
+  height: auto;
+}
+
+@media only screen and (max-width: 910px) {
+  .menu-btn {
+    display: block !important;
+  }
+  .credit-card {
+    right: 10px;
+    width: 120px;
+    top: 30px;
+  }
+  .ballon-card {
+    left: 30px;
+    bottom: 100px;
+    width: 60px;
+  }
+  .sidebar {
+    left: -250px;
+    padding-top: 15%;
+    top: 100px;
+  }
+  #main-content {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .navbar {
+    height: auto;
+  }
+  .top-banner {
+    margin-top: 30px;
+    z-index: -1;
+  }
+  .mobile-tab {
+    margin: 0 !important;
+  }
+  .dropHeading {
+    font-size: 1.1rem;
+  }
+  .coinImage {
+    width: 1.6rem;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .sidebar {
+    left: 0px;
+  }
+}
+
+
+

@@ -85,11 +85,10 @@
       <a href="https://panel.heypal.online/subscription" class="mb-2"
         >📨 History</a
       >
-      <a href="https://panel.heypal.online/profile" class="mb-2">👤 Profile</a>
-      <a href="#" class="mb-2">🔔 Notifications</a>
-      <a href="#" class="mb-2 active"
-        ><img src="./images/plan_icon.svg" alt="plan Icon" /> Plans</a
+      <a href="https://panel.heypal.online/profile" class="mb-2 active"
+        >👤 Profile</a
       >
+      <a href="#" class="mb-2">🔔 Notifications</a>
       <a href="https://panel.heypal.online/security-settings" class="mb-2"
         >⚙️ Settings</a
       >
@@ -262,8 +261,8 @@
       </div>
     </nav>
 
-    <!-- add banner -->
-    <div class="container-fluid" id="main-content">
+    <!-- main Container -->
+    <div class="container-fluid pb-4" id="main-content">
       <div class="row paddingInner">
         <div class="col top-banner">
           <img
@@ -309,186 +308,131 @@
         </div>
       </div>
 
-      <div class="PlanDashContent mt-3 paddingInner">
-        <h1 class="mdHeading">Choose Your Plan</h1>
-        <div class="row mt-3">
-          <!-- Monthly Tab -->
-          <div class="col-sm-2 col">
-            <div class="filterWrapper">
-              <p class="mdHeading tab active" data-tab="monthly">Monthly</p>
-              <div class="filterLine themeBg" data-tab-content="monthly"></div>
-            </div>
-          </div>
-
-          <!-- Yearly Tab -->
-          <div class="col-sm-2 col">
-            <div class="filterWrapper">
-              <p class="mdHeading tab" data-tab="yearly">Yearly</p>
-              <div class="filterLine" data-tab-content="yearly"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="tab-content">
-          <!-- montly -->
-          <div class="content active" id="monthly-content">
-            <div class="planCardWrraper">
-              <div class="row g-3">
-                <div class="col-lg-3">
-                  <div class="plansCards">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Free Plan</h1>
-                      <h5 class="subHeading mb-4">0$ Monthly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Regular display of contexual advertisement
-                      </p>
-                    </div>
-
-                    <button class="mainBtn text-center">Subscribe</button>
-                  </div>
+      <div
+        class="dashBoardRightMainContent callhistoryPageDashBoard mt-3 mx-lg-4 p-0"
+      >
+        <div class="profileForm">
+          <div class="row ">
+            <div class="col-xl-4 ">
+              <div class="uploadProfileDetails callProfileDetailCol">
+                <div class="dahboardProfilePage p-4 text-center">
+                  <img
+                    src="./images/profile_page_profile.png"
+                    alt="profile"
+                    class="dashProfile"
+                  />
+                  <h1 class="mdheading m-0 mt-2 p-0">Daney Khan</h1>
+                  <p class="subHeading">Influencer</p>
                 </div>
-                <div class="col-lg-3">
-                  <div class="plansCards active">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Basic Plan</h1>
-                      <h5 class="subHeading mb-4">19$ Monthly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Regular display of contexual advertisement displayed
-                      </p>
-                      <p class="mainText">
-                        Access to basic Feature Such as profile Customization
-                        and Group Creation
-                      </p>
-                    </div>
 
-                    <button class="mainBtn acitve">Subscribe</button>
+                <div class="row px-3 my-3 callprofilebtnRow">
+                  <div class="col-sm-3  col-12  ">
+                    <button class="mainBtn">
+                      <img
+                        src="./images/add.svg"
+                        class="addImageIcon"
+                        alt="deoisut"
+                        width="15"
+                      />
+                      Call
+                    </button>
                   </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="plansCards">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Goldan Plan</h1>
-                      <h5 class="subHeading mb-4">38$ Monthly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Advertisements displyed occasionally reduced compared to
-                        the Bronze subscription.
-                      </p>
-                      <p class="mainText">
-                        Access to addtition feature such as priorty messaging
-                        and advanced profile statistices.
-                      </p>
-                    </div>
-
-                    <button class="mainBtn acitve">Subscribe</button>
+                  <div class="col-sm-3 col-12  ">
+                    <button class="mainBtn">
+                      <img
+                        src="./images/add.svg"
+                        class="addImageIcon"
+                        alt="deoisut"
+                        width="15"
+                      />
+                      Add
+                    </button>
                   </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="plansCards active">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Enterprise Plan</h1>
-                      <h5 class="subHeading mb-4">300$ Monthly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Regular display of contexual advertisement displayed
-                      </p>
-                      <p class="mainText">
-                        Access to basic Feature Such as profile Customization
-                        and Group Creation
-                      </p>
-                    </div>
+                  <div class="col-sm-3 col-12    ">
+                    <button class="mainBtn">
+                      <img
+                        src="./images/block.svg"
+                        class="addImageIcon"
+                        alt="deoisut"
+                        width="15"
+                      />
+                      block
+                    </button>
+                  </div>
+                  <div class="col-sm-3 col-12  ">
+                    <button class="mainBtn">
+                      <img
+                        src="./images/report.svg"
+                        class="addImageIcon"
+                        alt="deoisut"
+                        width="15"
+                      />
+                      Report
+                    </button>
+                  </div>
+                </div> 
+                <div class="intersatWrapper">
+                  <div class="intersetContainer">
+                    <h1 class="mdHeading">interests</h1>
 
-                    <button class="mainBtn acitve">Subscribe</button>
+                    <!-- add teh intersets content here  -->
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- yearly -->
-          <div class="content" id="yearly-content">
-            <div class="planCardWrraper">
-              <div class="row g-3">
-                <div class="col-lg-3">
-                  <div class="plansCards">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Free Plan</h1>
-                      <h5 class="subHeading mb-4">0$ Yearly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Regular display of contexual advertisement
-                      </p>
+            <div class="col-xl-8">
+              <div class="callAboutCol">
+                <div class="callaboutsection">
+                    <h1 class="mdheading mb-2">About</h1>
+                    <p class="mainText col-lg-8">HeyPal aims to help people learn new languages by conversing with native speakers through social media features like chats...</p>
+                </div> 
+
+                <div class="callprofileTable mt-4">
+                    <h1 class="mdheading mb-2">Profile</h1>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">First Name</h5>
+                        <h5 class="tableHeading tablelgBox">Daney </h5>
                     </div>
-
-                    <button class="mainBtn text-center">Subscribe</button>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="plansCards active">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Basic Plan</h1>
-                      <h5 class="subHeading mb-4">19$ Yearly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Regular display of contexual advertisement displayed
-                      </p>
-                      <p class="mainText">
-                        Access to basic Feature Such as profile Customization
-                        and Group Creation
-                      </p>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Last Name</h5>
+                        <h5 class="tableHeading tablelgBox">Khan </h5>
                     </div>
-
-                    <button class="mainBtn acitve">Subscribe</button>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="plansCards">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Goldan Plan</h1>
-                      <h5 class="subHeading mb-4">38$ Yearly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Advertisements displyed occasionally reduced compared to
-                        the Bronze subscription.
-                      </p>
-                      <p class="mainText">
-                        Access to addtition feature such as priorty messaging
-                        and advanced profile statistices.
-                      </p>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Education</h5>
+                        <h5 class="tableHeading tablelgBox">M.s Computer Science </h5>
                     </div>
-
-                    <button class="mainBtn acitve">Subscribe</button>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="plansCards active">
-                    <div class="planCardTextContent">
-                      <h1 class="mdHeading">Enterprise Plan</h1>
-                      <h5 class="subHeading mb-4">300$ Yearly</h5>
-                      <p class="mainText">Free communication between User</p>
-                      <p class="mainText">
-                        Regular display of contexual advertisement displayed
-                      </p>
-                      <p class="mainText">
-                        Access to basic Feature Such as profile Customization
-                        and Group Creation
-                      </p>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Address</h5>
+                        <h5 class="tableHeading tablelgBox">Montain View, California </h5>
                     </div>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Country</h5>
+                        <h5 class="tableHeading tablelgBox">United States </h5>
+                    </div>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Job</h5>
+                        <h5 class="tableHeading tablelgBox">Influencer </h5>
+                    </div>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Company</h5>
+                        <h5 class="tableHeading tablelgBox">GitHub lnc </h5>
+                    </div>
+                    <div class="callprofileTabledata">
+                        <h5 class="tableHeading">Phone</h5>
+                        <h5 class="tableHeading tablelgBox">+1(248) 679-0000 </h5>
+                    </div>
+                </div> 
 
-                    <button class="mainBtn acitve">Subscribe</button>
-                  </div>
-                </div>
+
+                 
               </div>
             </div>
           </div>
+ 
         </div>
       </div>
     </div>
-
-    <!-- main Container -->
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
@@ -518,35 +462,6 @@
             alert("You are now OFFLINE");
           }
         });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll(".tab");
-        const filterLines = document.querySelectorAll(".filterLine");
-        const contents = document.querySelectorAll(".content");
-
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", function () {
-            // Remove active classes from tabs and filter lines
-            tabs.forEach((t) => t.classList.remove("active"));
-            filterLines.forEach((line) => line.classList.remove("themeBg"));
-            contents.forEach((content) => content.classList.remove("active"));
-
-            // Add active class to the clicked tab
-            this.classList.add("active");
-
-            // Add themeBg to the corresponding filterLine
-            const tabValue = this.getAttribute("data-tab");
-            document
-              .querySelector(`[data-tab-content="${tabValue}"]`)
-              .classList.add("themeBg");
-
-            // Show corresponding content
-            document
-              .getElementById(`${tabValue}-content`)
-              .classList.add("active");
-          });
-        });
-      });
     </script>
   </body>
 </html>
